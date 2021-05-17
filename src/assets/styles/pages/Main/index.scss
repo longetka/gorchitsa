@@ -1,10 +1,15 @@
 .hero {
 	&-title {
-		width: 78%;
+		width: 65%;
 	}
 	&-button {
 		color: $black;
 		border: 2px solid $black;
 		padding: 5px;
+	}
+	&-image {
+		width: 40%;
+		border-radius: 5px;
+		box-shadow: 1px 1px 6px 1px $black;
 	}
 }

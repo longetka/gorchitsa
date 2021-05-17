@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { BrowserRouter as Router, Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 interface IButtonProps {
 	url: string;
@@ -8,14 +8,12 @@ interface IButtonProps {
 export const ButtonSubscribe: FC<IButtonProps> = ({url}) => {
 	return (
 		<div className="flex flex-j-c-c">
-			<Router>
-				<Link 
-					to={url} 
-					className="hero-button text-d-n font-montserrat" 
-				>
-					ЗАПИСАТЬСЯ
-				</Link>
-			</Router>
+			<Link 
+				to={url} 
+				className="hero-button text-d-n font-montserrat" 
+			>
+				ЗАПИСАТЬСЯ
+			</Link>
 		</div>
 	);
 };

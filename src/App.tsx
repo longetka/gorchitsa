@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import logo from './assets/images/logo.png';
-import heroImage from './assets/images/hero-image.png';
+import heroImage from './assets/images/hero-image.jpg';
 import './assets/styles/index.scss';
 import { Logo } from './components/Navigation/Logo';
 import { Menu } from './components/Navigation/Menu';

@@ -1,29 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export const Menu: FC = () => {
-
-	const menu = () => {
-		document
-			.querySelector('.menu-items-list')?.classList
-			.toggle('visible')
-		
+	const [isOpen, setIsOpen] = useState(false);
+	
+	const menuToggle = () => {
+		setIsOpen(!isOpen)
+	}
+	const menuClosed = () => {
+		setIsOpen(false);
 	}
 
 	return (
 			<div className="menu">
-				<div 
-					className="menu-button"
-					onClick={menu}
-				>
+				<div className="menu-button" onClick={menuToggle}>
 					МЕНЮ
 				</div>
-					<div className="menu-items-list">
-						<Link to="/" className="menu-item">ГЛАВНАЯ</Link>
-						<Link to="/price" className="menu-item">ПРАЙС</Link>
-						<Link to="/gallery" className="menu-item">ГАЛЕРЕЯ</Link>
-						<Link to="/contacts" className="menu-item">КОНТАКТЫ</Link>
-					</div>
+				{isOpen
+					? 	<div className="menu-items-list visible">
+							<Link to="/" className="menu-item" onClick={menuClosed}>ГЛАВНАЯ</Link>
+							<Link to="/price" className="menu-item" onClick={menuClosed}>ПРАЙС</Link>
+							<Link to="/gallery" className="menu-item" onClick={menuClosed}>ГАЛЕРЕЯ</Link>
+							<Link to="/contacts" className="menu-item" onClick={menuClosed}>КОНТАКТЫ</Link>
+						</div>
+					: 	<div className="menu-items-list"></div>
+				}
 			</div>
 	);
 };
