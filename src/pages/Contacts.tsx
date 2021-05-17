@@ -15,7 +15,7 @@ export const Contacts: FC = () => {
 			name: 'WhatsApp',
 			img: whatsapp,
 			text: '+7(962)793-01-61',
-			url: "https://wa.me/79627930161?text=Здравствуйте,20%хочу20%к20%Вам20%записаться"
+			url: "https://wa.me/79627930161?text=Здравствуйте,%20хочу%20к%20Вам%20записаться"
 		},
 		{
 			name: 'Telegram',
