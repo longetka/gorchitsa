@@ -7,7 +7,7 @@ import whatsapp from '../../assets/icons/whatsapp.png';
 export const Footer: FC = () => {
 	return (
 		<footer className="m-t-20">
-			<div className="flex flex-j-c-c">
+			<div className="flex flex-j-c-c m-x-30p">
 				<img 
 					className="footer-logo" 
 					src={logo} 
