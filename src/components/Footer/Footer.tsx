@@ -23,7 +23,7 @@ export const Footer: FC = () => {
 				<a href="https://t.me/alena_aic">
 					<img src={telegram} alt="Telegram" />
 				</a>
-				<a href="https://wa.me/79627930161">
+				<a href="https://wa.me/79627930161?text=Здравствуйте,20%хочу20%к20%Вам20%записаться">
 					<img src={whatsapp} alt="Whatsapp" />
 				</a>
 			</div>
