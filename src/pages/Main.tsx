@@ -14,7 +14,7 @@ export const Main: FC<IMainProps> = ({
 	}) => {
 	return (
 		<div>
-			<div className="flex flex-j-c-c m-a-20-30p">
+			<div className="flex flex-j-c-c m-t-20">
 				<img className="hero-image" src={src} alt={alt} />
 			</div>
 			<div 
