@@ -1,0 +1,32 @@
+.accordeon {
+	z-index: 1;
+	&-button {
+		border-bottom: 1px solid $black;
+		padding-bottom: 5px;
+		& img {
+			transition: all .2s ease-in;
+			transform: rotate(-90deg);
+		}
+		&--visible {
+			& img {
+				transform: rotate(0deg);
+			}
+		}
+	}
+	&-item {
+		display: none;
+		&--visible {
+			display: block;
+		}
+	}
+}
+.services {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	&-name {
+		text-align: end;
+	}
+	&-price {
+		place-self: center end;
+	}
+}

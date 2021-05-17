@@ -1,0 +1,10 @@
+.hero {
+	&-title {
+		width: 78%;
+	}
+	&-button {
+		color: $black;
+		border: 2px solid $black;
+		padding: 5px;
+	}
+}
