@@ -1,9 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import insta from '../assets/icons/instagram.png';
 import whatsapp from '../assets/icons/whatsapp.png';
 import telegram from '../assets/icons/telegram.png';
+import map from '../apis/2gis.api';
 
 export const Contacts: FC = () => {
+	useEffect(() => map(), []);
 	const social = [
 		{
 			name: 'Instagram',
