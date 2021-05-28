@@ -2,10 +2,24 @@ import React, { FC, useEffect } from 'react';
 import insta from '../assets/icons/instagram.png';
 import whatsapp from '../assets/icons/whatsapp.png';
 import telegram from '../assets/icons/telegram.png';
-import map from '../apis/2gis.api';
+import DG from '../apis/2gis.api';
 
 export const Contacts: FC = () => {
-	useEffect(() => map(), []);
+	useEffect(() => {
+		let map;
+		let coordinates = [52.5370802,85.2206601];
+		DG.then(function() {
+			map = DG.map('map', {
+				center: coordinates,
+				zoom: 17
+			});
+			DG
+				.marker(coordinates)
+				.addTo(map)
+				.bindPopup('ул. Советская, 27/3, ТЦ Бута, вход через SPA бутон')
+		});
+		
+	},[]);
 	const social = [
 		{
 			name: 'Instagram',
